@@ -21,14 +21,14 @@ const setSlideRef = (el: any, index: number) => {
 const handleScroll = () => {
     if (!scrollContainer.value || !horizontalTrack.value) return;
     
-    const containerTop = scrollContainer.value.offsetTop;
+    const rect = scrollContainer.value.getBoundingClientRect();
     const containerHeight = scrollContainer.value.offsetHeight;
     const windowHeight = window.innerHeight;
-    const scrollTop = window.pageYOffset;
     
-    // Calculate progress within the sticky section
-    let progress = (scrollTop - containerTop) / (containerHeight - windowHeight);
-    progress = Math.max(0   , Math.min(1, progress));
+    // progress is 0 when the container's top hits the viewport top
+    // progress is 1 when the container's bottom hits the viewport bottom
+    let progress = -rect.top / (containerHeight - windowHeight);
+    progress = Math.max(0, Math.min(1, progress));
     
     scrollProgress.value = progress;
 };
@@ -75,7 +75,7 @@ onUnmounted(() => {
             
             <h1 class="section-title">{{ heading }}</h1>
             
-            <div class="horizontal-track" ref="horizontalTrack" :style="{ transform: `translateX(-${scrollProgress * 260}vw)` }">
+            <div class="horizontal-track" ref="horizontalTrack" :style="{ transform: `translateX(-${scrollProgress * 290}vw)` }">
                 
                 <!-- Slide 1: Backend -->
                 <div class="skill-slide" :ref="el => setSlideRef(el, 0)">
@@ -166,14 +166,16 @@ onUnmounted(() => {
                         </div>
                     </div>
                 </div>
-                 <div class="polaroid-card" style="--rotation: -1deg; height: 80%; background-color:whitesmoke; opacity: 0.80;">
-                    <div class="card-inner">
-                        <img class="Gifs" src="https://i.pinimg.com/originals/3f/3b/88/3f3b8883f6626fdfb36947316a42ed71.gif" alt=""  
-                        style="opacity:0.90;">
+                 <div class="skill-slide" :ref="el => setSlideRef(el, 3)">
+                     <div class="polaroid-card" style="--rotation: -1deg; height: 80%; background-color:whitesmoke; opacity: 0.80;">
+                        <div class="card-inner">
+                            <img class="Gifs" src="https://i.pinimg.com/originals/3f/3b/88/3f3b8883f6626fdfb36947316a42ed71.gif" alt=""  
+                            style="opacity:0.90;">
+                            </div>
+                        <div class="polaroid-footer">
+                            <span class="caption">The end!! 🚀</span>
                         </div>
-                    <div class="polaroid-footer">
-                        <span class="caption">The end!! 🚀</span>
-                    </div>
+                     </div>
                  </div>
 
             </div>
@@ -185,7 +187,7 @@ onUnmounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Outfit:wght@400;700;800&family=Inter:wght@400;700&display=swap');
 
 .sticky-parent {
-    height: 400vh;
+    height: 200vh;
     background-color: white;
 }
 
@@ -238,9 +240,10 @@ onUnmounted(() => {
     display: flex;
     will-change: transform;
     padding-left: 5vw;
-    margin-top: 12vh; /* Pushed cards down */
+    margin-top: 0;
     position: relative;
     z-index: 10;
+    gap: 5vw;
 }
 
 /* Arrow Animation */
@@ -262,13 +265,12 @@ onUnmounted(() => {
 
 .skill-slide {
     flex-shrink: 0;
-    width: 100vw;
+    width: 90vw;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6vw;
-    padding-right: 10vw;
     opacity: 0;
     transform: translateY(20px);
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
@@ -431,6 +433,76 @@ p strong {
     backdrop-filter: blur(4px);
     z-index: 100;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+    .sticky-parent {
+        height: auto !important;
+        padding: 60px 0;
+    }
+    
+    .sticky-child {
+        position: relative !important;
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+    
+    .section-title {
+        position: relative !important;
+        top: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin-bottom: 50px;
+        width: fit-content;
+    }
+    
+    .horizontal-track {
+        flex-direction: column !important;
+        transform: none !important;
+        padding-left: 0 !important;
+        gap: 80px;
+        margin-top: 0 !important;
+    }
+    
+    .skill-slide {
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        opacity: 1 !important;
+        transform: none !important;
+        padding: 0 20px !important;
+    }
+    
+    .slide-info {
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+    
+    h2 {
+        font-size: 2.8rem !important;
+        line-height: 1.1;
+    }
+    
+    p {
+        font-size: 1.2rem !important;
+        text-align: center;
+    }
+    
+    .polaroid-card {
+        width: 100% !important;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    
+    .card-inner {
+        height: 300px !important;
+    }
+    
+    .hand-drawn-arrow {
+        display: none !important;
+    }
 }
 
 </style>

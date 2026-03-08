@@ -13,7 +13,8 @@
 <style scoped>
 .gif{
     width: 100%;
-    height: 100%;
+    min-height: 400px;
+    padding: 100px 0;
     background-color: white;
     display: flex;
     justify-content: center;
