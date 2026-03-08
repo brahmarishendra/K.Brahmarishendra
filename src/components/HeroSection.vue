@@ -39,6 +39,9 @@
     min-height: 80vh; /* Reduced from 100vh */
     padding-top: 90px;
     max-height: 800px;
+    overflow: hidden; /* Prevent decorative elements from overflowing */
+    position: relative;
+    width: 100%;
 }
 
 .hero-left {

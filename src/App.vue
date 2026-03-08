@@ -25,12 +25,5 @@ import Footer from './components/Footer.vue';
 </template>
 
 <style scoped>
-body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  font-family: var(--font-body);
-  background-color: #D4FDF7;
-}
+/* Scoped styles relocated to global style.css for better mobile support */
 </style>

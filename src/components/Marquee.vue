@@ -37,6 +37,7 @@
 <style scoped>
 .marquee-container {
   width: 100%;
+  max-width: 100vw;
   height: 100%;
   background: white;
   padding: 2rem 0;

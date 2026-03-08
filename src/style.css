@@ -9,25 +9,37 @@
   --grid-line-color: rgba(0, 0, 0, 0.1);
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
   font-family: var(--font-body);
   color: var(--color-text-dark);
   line-height: 1.5;
-  overflow-x: hidden;
+  background-color: #D4FDF7;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3 {
   font-family: var(--font-heading);
+  word-break: break-word; /* Prevent long titles from breaking layout */
 }
 
 button {
