@@ -438,7 +438,7 @@ p strong {
 @media (max-width: 768px) {
     .sticky-parent {
         height: auto !important;
-        padding: 60px 0;
+        padding: 0px 0;
     }
     
     .sticky-child {
@@ -499,10 +499,7 @@ p strong {
     .card-inner {
         height: 300px !important;
     }
-    
-    .hand-drawn-arrow {
-        display: none !important;
-    }
+
 }
 
 </style>
