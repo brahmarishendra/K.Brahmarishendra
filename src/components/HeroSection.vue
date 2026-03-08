@@ -21,10 +21,6 @@
                     <div class="mainShadow"></div>
                     <div class="button-shadow"></div>
                 </div>
-                <div class="direct-contact">
-                    <i class="fa-solid fa-phone"></i> +91 868XXXXXXX <!-- I'll use a placeholder or generic format if unspecified, but user said "on hero number" -->
-                    <!-- Re-reading: "on hero number" might mean "my number on hero" -->
-                </div>
             </div>
         </div>
         <div class="hero-right">

@@ -128,12 +128,11 @@ onMounted(() => {
           </div>
         </div>
       </div>
-
-      <!-- Mobile Only View More Button -->
-      <div class="mobile-action">
-          <a href="#projects" class="mobile-btn">
-              Next Projects <i class="fa-solid fa-arrow-right"></i>
-          </a>
+      <div class="scroll-indicator">
+        <span>Scroll for more</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
     </div>
   </section>
@@ -385,47 +384,31 @@ onMounted(() => {
     display: none;
   }
 
-    .shardian-card {
+  .shardian-card {
     min-width: 85vw;
     scroll-snap-align: center;
   }
 
-  /* Mobile Only Action Button */
-  .mobile-action {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    padding: 0 20px;
-  }
-
-  .mobile-btn {
-    background-color: #0d0d21;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 700;
+  .scroll-indicator {
     display: flex;
     align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    border: 1.5px solid #0d0d21;
-    transition: all 0.2s ease;
-    width: 100%;
     justify-content: center;
-    box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+    gap: 10px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    animation: bounceX 2s infinite;
   }
 
-  .mobile-btn:active {
-    transform: translate(2px, 2px);
-    box-shadow: 0 0 0 rgba(0,0,0,0.2);
+  @keyframes bounceX {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
   }
 }
 
-/* Hide mobile action on desktop */
-@media (min-width: 801px) {
-  .mobile-action {
-    display: none;
-  }
+.scroll-indicator {
+  display: none;
 }
 </style>
