@@ -72,21 +72,21 @@ const handleArrowAnimation = () => {
                 </div>
             </div>
 
+            <!-- CTA SECTION MOVED TO TOP -->
+            <div class="mobile-cta-top">
+                <a href="mailto:brahmarishi868@gmail.com" class="head-btn mobile-start-btn" style="text-decoration: none;" @click="toggleMenu">
+                    Connect me <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
             <nav class="mobile-nav">
                 <ul class="mobile-links">
                     <li><a href="#experience" @click="toggleMenu">Experience <i class="fa-solid fa-arrow-right-long"></i></a></li>
                     <li><a href="#projects" @click="toggleMenu">Projects <i class="fa-solid fa-arrow-right-long"></i></a></li>
                     <li><a href="#socials" @click="toggleMenu">Socials <i class="fa-solid fa-arrow-right-long"></i></a></li>
                     <li><a href="https://github.com/brahmarishendra" @click="toggleMenu">My Github <i class="fa-solid fa-arrow-right-long"></i></a></li>
-                    <li><a href="mailto:brahmarishi868@gmail.com" @click="toggleMenu" class="mobile-cta-link">Connect me <i class="fa-solid fa-arrow-right-long"></i></a></li>
                 </ul>
             </nav>
-
-            <div class="mobile-footer">
-                <div class="cta-section">
-                    <a href="mailto:brahmarishi868@gmail.com" class="head-btn mobile-start-btn" style="text-decoration: none;">Connect me <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
         </div>
     </nav>
 </template>
@@ -350,6 +350,11 @@ const handleArrowAnimation = () => {
     font-weight: 600;
     outline: none;
     color: #333;
+}
+
+.mobile-cta-top {
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
 }
 
 .cta-section {

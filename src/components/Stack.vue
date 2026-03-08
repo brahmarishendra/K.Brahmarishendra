@@ -526,7 +526,7 @@ p strong {
 
     .grass-bg {
         background-attachment: scroll;
-        opacity: 0.4; /* Slightly darker for better contrast on mobile */
+        opacity: 0.80; /* Slightly darker for better contrast on mobile */
     }
 }
 </style>
