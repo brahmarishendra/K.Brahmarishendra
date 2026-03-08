@@ -84,18 +84,13 @@ onMounted(() => {
                 </a>
               </div>
               <div class="illustration-area grid-pattern green">
-                  <div class="sketch-person working desktop-only">
+                 <div class="sketch-person working">
                     <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
                        <rect x="4" y="10" width="16" height="10" rx="1"/>
                        <path d="M12 10V6M12 6c0-1 1-2 2-2s2 1 2 2-1 2-2 2-2-1-2-2z"/>
                        <path d="M8 20l-1 2M16 20l1 2"/>
                     </svg>
-                  </div>
-                  <div class="mobile-arrow-container">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mobile-arrow">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
+                 </div>
               </div>
            </div>
         </div>
@@ -245,20 +240,6 @@ onMounted(() => {
   bottom: 20px;
 }
 
-.mobile-arrow-container {
-  display: none;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-arrow {
-  width: 50%;
-  height: 50%;
-  transform: rotate(-45deg);
-}
-
 /* Button */
 .demo-btn {
   display: inline-flex;
@@ -315,13 +296,6 @@ onMounted(() => {
   }
   .events-card .illustration-area {
     min-height: 200px;
-    background-color: #38ef7d; /* Vibrant Green from footer */
-  }
-  .desktop-only {
-    display: none;
-  }
-  .mobile-arrow-container {
-    display: flex;
   }
 }
 </style>

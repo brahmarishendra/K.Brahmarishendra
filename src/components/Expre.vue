@@ -128,12 +128,6 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <span>Scroll for more</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
     </div>
   </section>
 </template>
@@ -388,27 +382,5 @@ onMounted(() => {
     min-width: 85vw;
     scroll-snap-align: center;
   }
-
-  .scroll-indicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    color: white;
-    font-weight: 700;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    animation: bounceX 2s infinite;
-  }
-
-  @keyframes bounceX {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(10px); }
-  }
-}
-
-.scroll-indicator {
-  display: none;
 }
 </style>
