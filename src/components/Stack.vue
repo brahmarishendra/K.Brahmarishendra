@@ -186,7 +186,7 @@ onUnmounted(() => {
 
 .sticky-parent {
     height: 900vh; /* Increased for deeper scroll */
-    background-color: #D4FDF7;
+    background-color: white;
 }
 
 .sticky-child {
@@ -433,100 +433,4 @@ p strong {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-@media (max-width: 1400px) {
-    h2 { font-size: 4rem; }
-    .polaroid-card { width: 360px; }
-    .card-inner { height: 320px; }
-    p { font-size: 1.3rem; }
-}
-
-@media (max-width: 1024px) {
-    .skill-slide { gap: 4vw; padding-right: 5vw; }
-    h2 { font-size: 3.5rem; }
-    .slide-info { max-width: 450px; }
-}
-
-@media (max-width: 768px) {
-    .sticky-parent { 
-        height: auto !important; /* Disable scroll hijacking */
-        padding: 60px 0;
-    }
-    
-    .sticky-child { 
-        position: relative !important; 
-        height: auto !important;
-        overflow: visible !important;
-    }
-    
-    .section-title {
-        position: relative;
-        top: 0;
-        margin-bottom: 40px;
-        width: fit-content;
-        font-size: 0.9rem;
-        letter-spacing: 0.3rem;
-    }
-    
-    .horizontal-track { 
-        flex-direction: column !important;
-        transform: none !important; /* Kill horizontal movement */
-        padding-left: 0 !important;
-        margin-top: 0 !important;
-        gap: 80px; /* Space between cards */
-    }
-    
-    .skill-slide { 
-        flex-direction: column !important; 
-        height: auto !important;
-        width: 100% !important;
-        padding: 0 1.5rem !important;
-        gap: 30px !important;
-        text-align: center;
-        opacity: 1 !important; /* Ensure visibility */
-        transform: none !important;
-    }
-    
-    .slide-info { 
-        max-width: 100% !important; 
-        text-align: center !important; 
-    }
-
-    .badge {
-        margin-bottom: 1rem;
-    }
-    
-    h2 { 
-        font-size: 2.2rem !important; 
-        line-height: 1.1;
-    }
-    
-    p { 
-        font-size: 1.1rem !important; 
-        margin-bottom: 20px;
-        line-height: 1.6;
-    }
-    
-    .polaroid-card { 
-        width: calc(100vw - 40px) !important; 
-        max-width: 340px;
-        margin: 0 auto;
-    }
-    
-    .card-inner {
-        height: 280px !important;
-    }
-
-    .skill-stack-list span {
-        font-size: 1.1rem;
-    }
-
-    .hand-drawn-arrow {
-        display: none; /* Hide arrows on mobile to reduce clutter */
-    }
-
-    .grass-bg {
-        background-attachment: scroll;
-        opacity: 0.80; /* Slightly darker for better contrast on mobile */
-    }
-}
 </style>
