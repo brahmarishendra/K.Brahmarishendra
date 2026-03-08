@@ -128,6 +128,13 @@ onMounted(() => {
           </div>
         </div>
       </div>
+
+      <!-- Mobile Only View More Button -->
+      <div class="mobile-action">
+          <a href="#projects" class="mobile-btn">
+              Next Projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+      </div>
     </div>
   </section>
 </template>
@@ -378,9 +385,47 @@ onMounted(() => {
     display: none;
   }
 
-  .shardian-card {
+    .shardian-card {
     min-width: 85vw;
     scroll-snap-align: center;
+  }
+
+  /* Mobile Only Action Button */
+  .mobile-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .mobile-btn {
+    background-color: #0d0d21;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    border: 1.5px solid #0d0d21;
+    transition: all 0.2s ease;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  }
+
+  .mobile-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 rgba(0,0,0,0.2);
+  }
+}
+
+/* Hide mobile action on desktop */
+@media (min-width: 801px) {
+  .mobile-action {
+    display: none;
   }
 }
 </style>
