@@ -449,7 +449,7 @@ p strong {
 @media (max-width: 768px) {
     .sticky-parent { 
         height: auto !important; /* Disable scroll hijacking */
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .sticky-child { 
@@ -461,48 +461,63 @@ p strong {
     .section-title {
         position: relative;
         top: 0;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         width: fit-content;
+        font-size: 0.9rem;
+        letter-spacing: 0.3rem;
     }
-
+    
     .horizontal-track { 
         flex-direction: column !important;
         transform: none !important; /* Kill horizontal movement */
         padding-left: 0 !important;
         margin-top: 0 !important;
-        gap: 120px; /* Space between cards */
+        gap: 80px; /* Space between cards */
     }
     
     .skill-slide { 
         flex-direction: column !important; 
         height: auto !important;
         width: 100% !important;
-        padding: 0 20px !important;
-        gap: 40px !important;
+        padding: 0 1.5rem !important;
+        gap: 30px !important;
         text-align: center;
+        opacity: 1 !important; /* Ensure visibility */
+        transform: none !important;
     }
     
     .slide-info { 
         max-width: 100% !important; 
         text-align: center !important; 
     }
+
+    .badge {
+        margin-bottom: 1rem;
+    }
     
     h2 { 
-        font-size: 2.8rem !important; 
+        font-size: 2.2rem !important; 
+        line-height: 1.1;
     }
     
     p { 
-        font-size: 1.2rem !important; 
-        margin-bottom: 30px;
+        font-size: 1.1rem !important; 
+        margin-bottom: 20px;
+        line-height: 1.6;
     }
     
     .polaroid-card { 
-        width: 320px !important; 
+        width: calc(100vw - 40px) !important; 
+        max-width: 340px;
         margin: 0 auto;
     }
     
     .card-inner {
         height: 280px !important;
+    }
+
+    .skill-stack-list span {
+        font-size: 1.1rem;
     }
 
     .hand-drawn-arrow {
@@ -511,7 +526,7 @@ p strong {
 
     .grass-bg {
         background-attachment: scroll;
-        opacity: 0.5; /* Slightly darker for better contrast on mobile */
+        opacity: 0.4; /* Slightly darker for better contrast on mobile */
     }
 }
 </style>

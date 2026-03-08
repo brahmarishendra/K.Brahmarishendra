@@ -212,4 +212,11 @@ p {
         min-height: 200px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    p { font-size: 1.1rem; }
+    .hero-left { padding: 3rem 1rem; }
+    .try-button { padding: 1rem 1.8rem; font-size: 1rem; }
+}
 </style>

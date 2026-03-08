@@ -476,8 +476,20 @@ onUnmounted(() => {
 
 @media (max-width: 1000px) {
   .socials-section { grid-template-columns: 1fr; }
-  .content-side { padding: 60px 20px; text-align: center; }
-  .visual-side { padding: 40px 20px; }
+  .content-side { padding: 40px 20px; text-align: center; }
+  .text-container h2 { font-size: 2.2rem; }
+  .hero-sub { margin-bottom: 30px; font-size: 1rem; }
+  .visual-side { padding: 40px 15px; }
+  .browser-window { max-width: 100%; box-shadow: 8px 8px 0 #000; }
+  .window-body { padding: 20px; }
+  .profile-header { flex-direction: column; text-align: center; }
+  .avatar-container img { width: 70px; height: 70px; }
+  .window-actions { grid-template-columns: 1fr; }
   .panda-container { display: none; }
+}
+
+@media (max-width: 480px) {
+  .text-container h2 { font-size: 1.8rem; }
+  .connect-btn { padding: 14px 30px; font-size: 1rem; }
 }
 </style>

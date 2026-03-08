@@ -269,8 +269,12 @@ onMounted(() => {
 }
 
 @media (max-width: 800px) {
+  .projects-section {
+    padding: 60px 15px;
+  }
   .bento-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .events-card {
     grid-column: span 1;
@@ -278,8 +282,20 @@ onMounted(() => {
   .card-layout-horizontal {
     flex-direction: column;
   }
+  .card-content {
+    padding: 20px;
+  }
   .card-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .card-content p {
+    font-size: 0.95rem;
+  }
+  .pipeline-card .illustration-area, .ai-card .illustration-area {
+    height: 160px;
+  }
+  .events-card .illustration-area {
+    min-height: 200px;
   }
 }
 </style>

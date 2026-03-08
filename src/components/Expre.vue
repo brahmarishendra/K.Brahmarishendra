@@ -351,11 +351,17 @@ onMounted(() => {
 
 @media (max-width: 800px) {
   .experience-gallery {
-    padding: 80px 0; /* Remove side padding to allow full-width scroll */
+    padding: 60px 0; /* Remove side padding to allow full-width scroll */
   }
 
   .gallery-header {
     padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .gallery-header h2 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
   }
 
   .experience-grid {
@@ -375,10 +381,6 @@ onMounted(() => {
   .shardian-card {
     min-width: 85vw;
     scroll-snap-align: center;
-  }
-
-  .gallery-header h2 {
-    font-size: 2.5rem;
   }
 }
 </style>
