@@ -185,7 +185,7 @@ onUnmounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Outfit:wght@400;700;800&family=Inter:wght@400;700&display=swap');
 
 .sticky-parent {
-    height: 900vh; /* Increased for deeper scroll */
+    height: 400vh;
     background-color: white;
 }
 
