@@ -5,7 +5,7 @@
 
 <template>
     <div class="gif">
-        <img src="https://i.pinimg.com/originals/bb/4e/1f/bb4e1fe13db51fe97c6dd2c33f954d15.gif" alt="" class="gifs">
+        <img src="https://i.pinimg.com/originals/d5/a5/22/d5a5220aa315b5d832630c519ca3d4a2.gif" alt="" class="gifs">
     </div>
 </template>
 
@@ -13,17 +13,19 @@
 <style scoped>
 .gif{
     width: 100%;
-    min-height: 100px;
-    padding: 0px 0;
+    margin: 0;
+    padding: 0;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-gifs{
+.gifs{
     width: 100%;
-    height: 100%;
-    margin-bottom: none;
+    height: 350px;
+    object-fit: cover;
+    margin: 0;
+    display: block;
 }
 </style>

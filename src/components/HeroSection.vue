@@ -17,7 +17,7 @@
                 <h1>Building Premium Digital Experiences</h1>
                 <p>Kesari Brahmarishendra: UI/UX Designer & Web Developer crafting high-performance interfaces and scalable solutions.</p>
                 <div class="cta-container">
-                    <a href="mailto:brahmarishi868@gmail.com" class="try-button" style="text-decoration: none;">Connect Me <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="mailto:brahmarishi868@gmail.com" class="try-button" style="text-decoration: none;">My Resume <i class="fa-solid fa-arrow-right"></i></a>
                     <div class="mainShadow"></div>
                     <div class="button-shadow"></div>
                 </div>

@@ -6,7 +6,7 @@ const projects = ref([
     id: 'pipeline',
     title: 'Pipeline Builder',
     description: 'Developed a sophisticated workflow builder featuring drag-and-drop node creation, dynamic pipeline logic, and backend DAG validation.',
-    link: 'https://github.com',
+    link: 'https://github.com/brahmarishendra/Pipeline-parser',
     type: 'GITHUB',
     theme: 'blue-clouds'
   },
